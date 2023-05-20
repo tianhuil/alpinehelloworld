@@ -20,4 +20,4 @@ RUN adduser -D myuser
 USER myuser
 
 # Run the app.  CMD is required to run on Heroku
-CMD  gunicorn api:app --worker-class uvicorn.workers.UvicornWorker --bind 0.0.0.0:$PORT
+CMD  gunicorn app:app --worker-class uvicorn.workers.UvicornWorker --bind 0.0.0.0:$PORT
