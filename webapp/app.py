@@ -1,7 +1,7 @@
-from fastapi import FastAPI
+from flask import Flask
 
-app = FastAPI()
+app = Flask(__name__)
 
-@app.get('/')
+@app.route('/')
 def hello():
     return 'Hello world!'
